@@ -22,8 +22,8 @@ constructor(private http: Http){}
     
 
     this.http.post("/get", JSON.stringify(data), this.basicOptions).subscribe(response => {
-        response = data;
-        console.log(this.data);
+     this.data = response.json();
+     console.log(this.data);
     });
 
 
